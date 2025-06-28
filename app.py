@@ -23,7 +23,7 @@ st.markdown("""
         font-family: 'Poppins', sans-serif;
     }
     .stApp {
-        background-color: #e0f0ff;  /* bleu clair */
+        background-color: #b8c0ff;  /* bleu clair */
     }
     
     .main {
