@@ -312,8 +312,8 @@ st.markdown("""
         color: #2d3436;
     }
     
-    .result-low { color: #00b894; }
-    .result-high { color: #e17055; }
+    .result-low { color: #2d3436; }
+    .result-high { color: #2d3436; }
     
     /* Progress bar */
     .stProgress > div > div > div {
