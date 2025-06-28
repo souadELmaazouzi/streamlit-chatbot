@@ -309,6 +309,7 @@ st.markdown("""
         font-size: 1.5rem;
         font-weight: 600;
         margin-bottom: 1rem;
+        color: #2d3436;
     }
     
     .result-low { color: #00b894; }
