@@ -274,7 +274,7 @@ st.markdown("""
     
     /* Résultats */
     .result-card {
-        background: rgba(255, 255, 255, 0.95);
+        background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
         backdrop-filter: blur(30px);
         border-radius: 24px;
         padding: 3rem 2rem;
