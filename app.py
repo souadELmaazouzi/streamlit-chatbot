@@ -25,7 +25,7 @@ st.markdown("""
     .stApp {
         background-color: #e0f0ff;  /* bleu clair */
     }
-    </style>
+    
     .main {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         min-height: 100vh;
