@@ -171,7 +171,7 @@ st.markdown("""
     }
     
     .stTextInput > div > div > input:focus {
-        background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) border-box !important;
+        background: linear-gradient(#4361ee, #4361ee)  padding-box, linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) border-box !important;
         box-shadow: 0 12px 35px rgba(79, 172, 254, 0.2) !important;
         transform: translateY(-2px) !important;
     }
