@@ -165,7 +165,7 @@ st.markdown("""
         border-radius: 20px !important;
         padding: 1.2rem 1.8rem !important;
         font-size: 1.1rem !important;
-        background: linear-gradient(#4361ee, #ffd6ff) padding-box, linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box !important;
+        background: linear-gradient(#4361ee, #4361ee) padding-box, linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box !important;
         transition: all 0.4s ease !important;
         box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important;
     }
