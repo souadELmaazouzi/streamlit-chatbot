@@ -295,7 +295,7 @@ st.markdown("""
         border-radius: 24px 24px 0 0;
     }
     
-    .result-card.risk-low::before { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    .result-card.risk-low::before {background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) }
     .result-card.risk-high::before { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
     
     .result-title {
