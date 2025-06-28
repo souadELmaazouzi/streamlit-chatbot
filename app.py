@@ -125,7 +125,7 @@ st.markdown("""
     
     /* Input container */
     .input-container {
-        background: rgba(255, 255, 255, 0.95);
+        background: rlinear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         backdrop-filter: blur(30px);
         border-radius: 24px;
         padding: 2rem;
