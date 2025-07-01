@@ -553,11 +553,20 @@ questions = [
       float, 
      "📊 Valeur numérique\n\n📈 À quoi ça sert ?\nCe paramètre indique si le cœur reçoit assez d’oxygène lors d’un effort. Une dépression du ST peut indiquer :\n\n💚 Pas de problème : si oldpeak est faible (proche de 0).\n\n⚠️ Ischémie possible (manque d’oxygène au cœur) : si oldpeak est élevé (ex: >2.0 mV).", 
      "Ex: 2.3"),
-    ("Quel est votre type de thalassémie ?", 
- "thal", 
- int, 
- "🧬 Choisissez parmi les types suivants :\n1 = Normal (aucun signe de thalassémie)\n2 = Thalassémie fixe (type modéré, anomalies constantes)\n3 = Thalassémie réversible (type souvent plus sévère, varie selon les patients)", 
- "Entrez 1, 2 ou 3")
+    (
+    "Quel est votre type de thalassémie ?",
+    "thal",
+    int,
+    "🧬 Choisissez parmi les types suivants :\n"
+    "1 = Normal (aucun signe de thalassémie)\n"
+    "2 = Thalassémie fixe (type modéré, anomalies constantes)\n"
+    "3 = Thalassémie réversible (type variable selon les patients)\n\n"
+    "Le type de thalassémie peut influencer la santé cardiovasculaire, notamment parce que cette maladie :\n"
+    "- Peut entraîner une anémie,\n"
+    "- Et dans les formes sévères, affecter le cœur à long terme (cardiomyopathies…).",
+    "Entrez 1, 2 ou 3"
+)
+
 
 ]
 
