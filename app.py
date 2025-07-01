@@ -548,7 +548,11 @@ questions = [
     ("Ressentez-vous des douleurs thoraciques ?", "cp", lambda x: 1 if x.lower() in ["oui", "yes", "o", "y"] else 0, "💔 Douleurs dans la poitrine", "Répondez par oui ou non"),
     ("Avez-vous des antécédents familiaux de maladies cardiaques ?", "ca", lambda x: 1 if x.lower() in ["oui", "yes", "o", "y"] else 0, "👨‍👩‍👧‍👦 Historique familial", "Répondez par oui ou non"),
     ("Quelle est votre fréquence cardiaque maximale mesurée ?", "thalach", int, "💓 Battements par minute", "Ex: 150"),
-    ("Quel est votre niveau de dépression ST mesuré ? (oldpeak)", "oldpeak", float, "📊 Valeur numérique", "Ex: 2.3"),
+    ("Quel est votre niveau de dépression ST mesuré ? (oldpeak)", 
+     "oldpeak", 
+      float, 
+     "📊 Valeur numérique\n\n📈 À quoi ça sert ?\nCe paramètre indique si le cœur reçoit assez d’oxygène lors d’un effort. Une dépression du ST peut indiquer :\n\n💚 Pas de problème : si oldpeak est faible (proche de 0).\n⚠️ Ischémie possible (manque d’oxygène au cœur) : si oldpeak est élevé (ex: >2.0 mV).", 
+     "Ex: 2.3"),
     ("Quel est votre type de thalassémie ?", "thal", int, "🧬 Type 1, 2 ou 3", "1=normal, 2=fixe, 3=réversible")
 ]
 
