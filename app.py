@@ -547,7 +547,25 @@ questions = [
     ("Quel est votre âge ? (en années)", "age", int, "🎂 Votre âge actuel", "Ex: 45"),
     ("Ressentez-vous des douleurs thoraciques ?", "cp", lambda x: 1 if x.lower() in ["oui", "yes", "o", "y"] else 0, "💔 Douleurs dans la poitrine", "Répondez par oui ou non"),
     ("Avez-vous des antécédents familiaux de maladies cardiaques ?", "ca", lambda x: 1 if x.lower() in ["oui", "yes", "o", "y"] else 0, "👨‍👩‍👧‍👦 Historique familial", "Répondez par oui ou non"),
-    ("Quelle est votre fréquence cardiaque maximale mesurée ?", "thalach", int, "💓 Battements par minute", "Ex: 150"),
+      ("Quelle est votre fréquence cardiaque maximale mesurée ?", 
+     "thalach", 
+     int, 
+     """💓 Battements par minute
+
+Pour un homme adulte en bonne santé, la fréquence cardiaque maximale (FCM) se calcule souvent avec la formule simple :
+
+FCM ≈ 220 − âge
+
+Par exemple, pour un homme de 40 ans :
+FCM ≈ 220 − 40 = 180 battements par minute (bpm)
+
+Valeurs typiques :
+
+- Chez un adulte jeune (20-30 ans), la FCM est généralement entre 190 et 200 bpm.
+- Chez un homme de 50 ans, autour de 170 bpm.
+- Elle diminue avec l’âge.
+""", 
+     "Ex: 150"),
     ("Quel est votre niveau de dépression ST mesuré ? (oldpeak)", 
      "oldpeak", 
       float, 
