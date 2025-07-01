@@ -4,6 +4,7 @@ import xgboost as xgb
 from sklearn.preprocessing import MinMaxScaler
 from fpdf import FPDF
 from datetime import datetime
+import os
 import plotly.graph_objects as go
 import tempfile
 import matplotlib.pyplot as plt
