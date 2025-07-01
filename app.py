@@ -5,7 +5,10 @@ from sklearn.preprocessing import MinMaxScaler
 from fpdf import FPDF
 from datetime import datetime
 import plotly.graph_objects as go
-
+import tempfile
+import matplotlib.pyplot as plt
+import streamlit.components.v1 as components
+import shap
 # Configuration de la page
 st.set_page_config(
     page_title="💖 CardioAI - Assistant Médical",
@@ -674,7 +677,30 @@ with col2:
             if key in ["cp", "ca"]:
                 value = "✅ Oui" if value == 1 else "❌ Non"
             st.markdown(f"**{key.upper()}:** {value}")
+def explain_prediction_shap(_model, processed_data):
+    """Génère une visualisation SHAP (force plot) comme HTML"""
+    explainer = shap.TreeExplainer(_model)
+    shap_values = explainer.shap_values(processed_data)
 
+    # Crée un fichier HTML temporaire
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".html") as tmp_file:
+        shap.save_html(
+            tmp_file.name,
+            shap.force_plot(
+                explainer.expected_value, 
+                shap_values[0], 
+                processed_data.iloc[0], 
+                matplotlib=False
+            )
+        )
+        tmp_file.flush()
+        with open(tmp_file.name, 'r', encoding='utf-8') as f:
+            shap_html = f.read()
+
+    # Supprimer le fichier temporaire
+    os.unlink(tmp_file.name)
+    
+    return shap_html
 # Traitement final et résultats
 if st.session_state.step >= len(questions):
     model = load_model()
@@ -706,6 +732,13 @@ if st.session_state.step >= len(questions):
             with col_gauge1:
                 fig = create_risk_gauge(prob)
                 st.plotly_chart(fig, use_container_width=True)
+                                # Explication SHAP
+                st.markdown("### 🧠 Interprétation par l'IA (SHAP)")
+                try:
+                    shap_html = explain_prediction_shap(model, processed)
+                    components.html(shap_html, height=300)
+                except Exception as e:
+                    st.error(f"Erreur lors du calcul SHAP : {e}")
             
             with col_gauge2:
                 st.markdown("### 📈 Interprétation")
